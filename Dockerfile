@@ -13,7 +13,7 @@ WORKDIR $APP_HOME
 # Allow statements and log messages to immediately appear in the Knative logs
 ENV PYTHONUNBUFFERED True
 COPY . ./
-RUN export GOOGLE_IMPERSONATE_SERVICE_ACCOUNT=cloud-saude-terraform@data-project-dev-314214.iam.gserviceaccount.com
+RUN export GOOGLE_IMPERSONATE_SERVICE_ACCOUNT=<impersonate service account>
 RUN pip install --no-cache-dir -r requirements.txt
 # Run the web service on container startup. Here we use the gunicorn
 # webserver, with one worker process and 8 threads.
